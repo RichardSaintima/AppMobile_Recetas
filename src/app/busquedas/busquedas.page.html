@@ -1,0 +1,22 @@
+<app-header>
+  Buscar recetas
+</app-header>
+
+
+<ion-content [fullscreen]="true">
+  <div class="buscar">
+    
+
+    <ion-searchbar show-cancel-button="focus" [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
+    <ion-list>
+      <ion-item *ngFor="let result of results">
+        <ion-label>{{ result }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+
+</ion-content>
+
+
+<app-footer></app-footer>

@@ -1,0 +1,33 @@
+<app-header>
+  Iniciar Session
+</app-header>
+
+  <ion-content [fullscreen]="true">
+
+ 
+    <div class="login__contenido">
+      <div >
+        <p class="login__texto">Iniciar Session</p>
+      </div>
+
+      <div class="login__formulario">
+        
+        <form>    
+          <ion-item>
+            <ion-label position="stacked">Correo electrónico</ion-label>
+            <ion-input type="email" name="email" placeholder="Ingresa tu Correo"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Contraseña</ion-label>
+            <ion-input type="password" name="password" placeholder="Ingresa tu Contraseña"></ion-input>
+          </ion-item>
+    
+          <ion-button type="submit" expand="full" >Enviar</ion-button>
+        </form>
+      </div>
+  </div>   
+
+  </ion-content> 
+
+  <app-footer></app-footer>

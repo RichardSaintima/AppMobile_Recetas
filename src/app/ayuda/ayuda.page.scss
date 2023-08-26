@@ -1,0 +1,81 @@
+.ayuda{
+
+  &__texto {
+      padding-bottom: 0;
+      font-size: 20px;
+      letter-spacing: 0.0125em;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      text-align: center;
+  }
+
+    &__informacion {
+        font-size: 1rem;
+        text-transform: capitalize;
+        max-width: 95%;
+        padding: 1rem;
+
+        a {
+            color: rgb(40, 73, 240);
+            text-decoration: none;
+        }
+    }
+
+    &__contenido {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 1rem; 
+    border-bottom: 1px solid #767474;
+    // padding-bottom: 2rem;
+
+    &:last-child {
+        border: none;
+    }
+  }
+  
+  &__formulario {
+    width: 95%; 
+    max-width: 95%; 
+    padding: 1.7rem;
+    ion-label {
+      padding-bottom: .7rem;
+    }
+    ion-input:not([type="ion-input"]) {
+      background-color: lighten(black, 10%);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding-inline-end: none;
+    }
+    ion-textarea {
+      background-color: lighten(black, 10%);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding-inline-end: none; 
+    }
+
+  }
+  
+
+    ion-icon {
+        font-size: 2.3rem;
+        padding: .5rem 1rem;  
+    }
+
+    &__contactos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 95%;
+        gap: .4rem;
+        margin: 0 auto;
+        a  {
+        color: white;
+        margin:0 auto;
+        }
+    }
+  ion-item {
+    margin-bottom: 15px;
+  }
+  
+  ion-button {
+    margin-top: 15px;
+  }
+  
+}

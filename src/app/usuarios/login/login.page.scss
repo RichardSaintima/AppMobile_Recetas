@@ -1,0 +1,37 @@
+.login {
+
+    &__texto {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+    }
+
+    &__contenido {
+        margin-bottom: 1rem; 
+        border-bottom: 1px solid #767474;
+    }
+
+    &__formulario {
+        width: 95%; 
+        max-width: 40rem; 
+        padding: 1.7rem;
+        margin: 0 auto;
+        ion-label {
+          padding-bottom: .7rem;
+        }
+        ion-input:not([type="ion-input"]) {
+          background-color: lighten(black, 10%);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding-inline-end: none;
+          font-size: 10px;
+        }
+        ion-button {
+            margin-top: 15px;
+            // background-color: red;
+        }
+      }
+
+
+}

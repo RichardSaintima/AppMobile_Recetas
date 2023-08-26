@@ -1,0 +1,37 @@
+.lista {
+
+    &__arriba {
+        margin-top: 1rem;
+
+        &--agregar {
+
+            ion-label ,
+            ion-icon{
+                color: rgb(144, 224, 253);   
+            }
+        }
+
+        &--buscar {
+        }
+    }
+
+
+    // Recetas
+
+    &__texto  {
+        ion-title {
+         font-weight: 900;
+        font-size: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;           
+        }
+
+    }
+
+    &__recetas {
+        ion-item {
+            --padding-start: 0;
+          }
+    }
+
+}
