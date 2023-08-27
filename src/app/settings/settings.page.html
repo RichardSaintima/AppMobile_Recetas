@@ -1,12 +1,56 @@
 
 <app-header>
   Confuguracion
-</app-header>
 
+</app-header>
   <ion-content [fullscreen]="true">
 
-  </ion-content> 
+    <div class="settings">
 
-
+      <div class="settings__general">
+        <div class="settings__texto">
+          <ion-title>Confurigacion</ion-title>
+        </div>
+        
+        <div class="settings__opciones">
+          <a class="settings__contenido" (click)="navigateTo('settings-general')">
+            <ion-icon name="options-outline"></ion-icon>
+            <p class="settings__texto" >Configuracion Generales</p>
+            <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+          </a>
+          <a class="settings__contenido" (click)="navigateTo('settings-cuenta')">
+            <ion-icon name="person-outline"></ion-icon>
+            <p class="settings__texto" >Configuracion de Perfil</p>
+            <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+          </a>
+          <a class="settings__contenido" (click)="navigateTo('settings-privacidad')">
+            <ion-icon name="shield-half-outline"></ion-icon>
+            <p class="settings__texto" >Privacidad y Seguridad</p>
+            <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+          </a>
+          <a class="settings__contenido" (click)="navigateTo('visualizaciones')">
+            <ion-icon name="eye-outline"></ion-icon>
+            <p class="settings__texto" >Configuracion de visualizaciones</p>
+            <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+          </a>
+        </div>
   
+      </div><!--General-->
+  
+      <a class="settings__otros" (click)="navigateTo('centro-ayuda')">
+        <p class="settings__texto--otros" >Centro de Ayuda</p>
+      </a>
+      <a class="settings__otros" (click)="navigateTo('terminos-usos')">
+        <p class="settings__texto--otros" >Terminos de uso</p>
+      </a>
+      <a class="settings__otros" (click)="navigateTo('politica-privacidad')">
+        <p class="settings__texto--otros" >Politicas de Privacidad</p>
+      </a>
+      <!-- <a class="settings__otros" (click)="navigateTo('visualizaciones')">
+        <p class="settings__texto--otros" >Centro de Ayuda</p>
+      </a> -->
+      
+    </div><!--Settings-->
+
+  </ion-content> 
   <app-footer></app-footer>

@@ -63,6 +63,34 @@ const routes: Routes = [
     path: 'registrar',
     loadChildren: () => import('./usuarios/registrar/registrar.module').then( m => m.RegistrarPageModule)
   },
+  {
+    path: 'settings-general',
+    loadChildren: () => import('./ElementSettings/settings-general/settings-general.module').then( m => m.SettingsGeneralPageModule)
+  },
+  {
+    path: 'settings-cuenta',
+    loadChildren: () => import('./ElementSettings/settings-cuenta/settings-cuenta.module').then( m => m.SettingsCuentaPageModule)
+  },
+  {
+    path: 'visualizaciones',
+    loadChildren: () => import('./ElementSettings/visualizaciones/visualizaciones.module').then( m => m.VisualizacionesPageModule)
+  },
+  {
+    path: 'settings-privacidad',
+    loadChildren: () => import('./ElementSettings/settings-privacidad/settings-privacidad.module').then( m => m.SettingsPrivacidadPageModule)
+  },
+  {
+    path: 'terminos-usos',
+    loadChildren: () => import('./Terms/terminos-usos/terminos-usos.module').then( m => m.TerminosUsosPageModule)
+  },
+  {
+    path: 'politica-privacidad',
+    loadChildren: () => import('./Terms/politica-privacidad/politica-privacidad.module').then( m => m.PoliticaPrivacidadPageModule)
+  },
+  {
+    path: 'centro-ayuda',
+    loadChildren: () => import('./Terms/centro-ayuda/centro-ayuda.module').then( m => m.CentroAyudaPageModule)
+  },
 ];
 
 @NgModule({

@@ -25,8 +25,14 @@ export class FooterComponentComponent  implements OnInit {
         case 'busquedas':
           this.router.navigate(['/busquedas']);
           break;
+        case 'settings':
+          this.router.navigate(['/settings']);
+          break;
         case 'ayuda':
           this.router.navigate(['/ayuda']);
+          break;
+        case 'recetlist':
+          this.router.navigate(['/recetlist']);
           break;
       default:
         break;
