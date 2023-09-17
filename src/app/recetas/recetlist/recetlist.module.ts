@@ -10,6 +10,8 @@ import { RecetlistPage } from './recetlist.page';
 
 import { SharedModule } from '../../components/components.module';
 
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -17,6 +19,7 @@ import { SharedModule } from '../../components/components.module';
     IonicModule,
     RecetlistPageRoutingModule,
     SharedModule,
+    MatPaginatorModule
   ],
   declarations: [RecetlistPage]
 })

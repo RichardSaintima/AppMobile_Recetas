@@ -1,0 +1,48 @@
+.lista {
+    ion-list {
+        padding: 1rem;
+        // display: flex;
+        // align-items: center;
+        text-align: center;
+    }
+    &__texto  {
+        ion-title {
+         font-weight: 900;
+        font-size: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;           
+        }
+
+    }
+
+    &__recetas {
+        ion-item {
+            --padding-start: 0;
+          }
+    }
+    &__video {
+        ion-item {
+            --padding-start: 0; 
+            --padding-end: 0;   
+            margin-bottom: 10px; 
+        }
+        
+        ion-label {
+            margin-bottom: 15px;
+        }
+        &--selecciona {
+            
+            ion-list {
+                padding: 5px;
+            }
+            video,
+            img {
+                max-width: 50px;
+                
+            }
+            
+        }
+  
+    }
+
+}

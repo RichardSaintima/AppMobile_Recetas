@@ -77,7 +77,13 @@
         
               <ion-item>
                 <ion-label position="stacked">Mensaje</ion-label>
-                <ion-textarea name="mensaje"></ion-textarea>
+                <ion-textarea 
+                  name="mensaje"
+                  helperText="Maximo Caracteres"
+                  [counter]="true"
+                  [maxlength]="100"
+                ></ion-textarea>
+                
               </ion-item>
         
               <ion-button expand="full" color="primary">Enviar</ion-button>

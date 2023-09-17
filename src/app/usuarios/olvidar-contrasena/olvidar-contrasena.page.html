@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>Recuperar Contraseña</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-align-items-center ion-padding">
+
+  <ion-title size="15" class="ion-text-center ion-padding-vertical">Restablecer Contraseña </ion-title>
+  
+  <ion-item class="ion-padding-vertical">
+    <ion-label position="floating">Ingresa tu E-mail</ion-label>
+    <ion-input type="email" ></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" shape="round" color="primary" [routerLink]="['/home']">Recuperar</ion-button>
+
+</ion-content>

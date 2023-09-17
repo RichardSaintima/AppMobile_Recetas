@@ -7,20 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent  implements OnInit {
-  public showResults = false;
-  public data = [
-    'Amsterdam',
-    'Buenos Aires',
-    'Cairo',
-    'Geneva',
-    'Hong Kong',
-    'Istanbul',
-    'London',
-    'Madrid',
-    'New York',
-    'Panama City',
-  ];
-  public results = [...this.data];
 
   constructor(private router: Router) {}
 
@@ -74,11 +60,4 @@ export class MenuComponent  implements OnInit {
     }
   }
   
-
-  handleInput(event: any) {
-    const query = event.target.value.toLowerCase();
-    this.results = this.data.filter((d) => d.toLowerCase().indexOf(query) > -1);
-
-    this.showResults = true;
-  }  
 }

@@ -8,7 +8,7 @@
     <div class="lista">
       <div class="lista__arriba">
         <div class="lista__arriba--agregar">
-          <ion-item (click)="navigateTo('recetinsert')">
+          <ion-item (click)="navigateTo('recetinset')">
             <ion-icon name="add-circle-outline" slot="start"></ion-icon>
             <ion-label>Agregar</ion-label>
           </ion-item>
@@ -82,13 +82,14 @@
               <ion-label>Item</ion-label>
             </ion-item>
           </ion-list>
-        </ion-card-content>
-
-
-      </div>
-      
+         
+        </ion-card-content>        
+     </div>
+             <ion-item lines="none">
+              <app-paginator></app-paginator>
+            </ion-item> 
+    
     </div><!--Listas-->
-
 
   </ion-content> 
 

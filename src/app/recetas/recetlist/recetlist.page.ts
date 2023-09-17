@@ -25,8 +25,8 @@ export class RecetlistPage implements OnInit {
       case 'recet-categorie':
         this.router.navigate(['/recet-categorie']);
         break;
-      case 'recetinsert':
-        this.router.navigate(['/recetinsert']);
+      case 'recetinset':
+        this.router.navigate(['/recetinset']);
         break;
       case 'recetdetail':
         this.router.navigate(['/recetdetail']);

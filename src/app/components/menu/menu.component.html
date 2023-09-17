@@ -6,12 +6,6 @@
   </ion-header>
   <ion-content class="ion-padding">
     <ion-list>
-      <ion-searchbar show-cancel-button="focus" [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
-      <ion-list *ngIf="showResults">
-        <ion-item *ngFor="let result of results">
-          <ion-label>{{ result }}</ion-label>
-        </ion-item>
-      </ion-list>
 
       <ion-item (click)="navigateTo('home')">
         <ion-icon name="home-outline" slot="start"></ion-icon>

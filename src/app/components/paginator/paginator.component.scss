@@ -1,0 +1,18 @@
+/* Estilos para la paginación */
+
+.paginacion  {
+
+    ion-title {
+        text-align: center;
+    }
+    ion-footer { 
+       width: 100%;
+       margin: 0 auto;
+        ion-toolbar {
+            display: flex;
+            justify-content: space-between;
+        }
+    }    
+}
+
+  

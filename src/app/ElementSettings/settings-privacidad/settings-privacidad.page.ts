@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-settings-privacidad',
@@ -7,9 +8,57 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsPrivacidadPage implements OnInit {
 
-  constructor() { }
+  constructor(private alertController: AlertController) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  async changePassword() {
+    const alert = await this.alertController.create({
+      header: 'Cambiar Contraseña',
+      inputs: [
+        {
+          name: 'currentPassword',
+          type: 'password',
+          placeholder: 'Contraseña Actual'
+        },
+        {
+          name: 'newPassword',
+          type: 'password',
+          placeholder: 'Nueva Contraseña'
+        }
+      ],
+      buttons: [
+        'Cancelar',
+        {
+          text: 'Cambiar',
+          handler: (data) => {
+
+            const currentPassword = data.currentPassword;
+            const newPassword = data.newPassword;
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
+  async deleteAccount() {
+    const alert = await this.alertController.create({
+      header: 'Borrar Cuenta',
+      message: '¿Estás seguro de que deseas borrar tu cuenta? Esta acción no se puede deshacer.',
+      buttons: [
+        'Cancelar',
+        {
+          text: 'Borrar',
+          handler: () => {
+            
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 
 }

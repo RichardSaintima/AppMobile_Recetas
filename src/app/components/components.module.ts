@@ -3,8 +3,7 @@ import { IonicModule } from '@ionic/angular';
 import { HeaderComponentComponent } from './header-component/header-component.component';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
 import { MenuComponent } from './menu/menu.component';
-import { RegisterComponent } from './register/register.component';
-import { FormRecetasComponent } from './form-recetas/form-recetas.component';
+import { PaginatorComponent } from './paginator/paginator.component';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -12,15 +11,13 @@ import { CommonModule } from '@angular/common';
     HeaderComponentComponent, 
     FooterComponentComponent, 
     MenuComponent,
-    FormRecetasComponent,
-    RegisterComponent
+    PaginatorComponent
   ],
   exports: [
     HeaderComponentComponent,
     FooterComponentComponent, 
     MenuComponent,
-    FormRecetasComponent,
-    RegisterComponent
+    PaginatorComponent
   ],
 
   imports: [

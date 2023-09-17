@@ -1,9 +1,36 @@
+
 .registro {
 
-    &__texto {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        font-weight: bold;
-        text-align: center;
+  &__texto {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+    &__contenido {
+      
+      margin-bottom: 1rem; 
+      border-bottom: 1px solid #767474;
     }
+
+    &__formulario {
+        // width: 95%; 
+        max-width: 40rem; 
+        padding: 1.7rem;
+        margin: 0 auto;
+        ion-label {
+          padding-bottom: .7rem;
+        }
+        ion-input:not([type="ion-input"]) {
+          padding-inline-end: none;
+          font-size: 10px;
+        }
+        ion-button {
+            margin-top: 15px;
+        }
+        
+      }
+
+
 }

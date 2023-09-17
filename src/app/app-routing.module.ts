@@ -16,14 +16,6 @@ const routes: Routes = [
     loadChildren: () => import('./recetas/recetlist/recetlist.module').then( m => m.RecetlistPageModule)
   },
   {
-    path: 'recetdetail',
-    loadChildren: () => import('./recetas/recetdetail/recetdetail.module').then( m => m.RecetdetailPageModule)
-  },
-  {
-    path: 'recetinsert',
-    loadChildren: () => import('./recetas/recetinsert/recetinsert.module').then( m => m.RecetinsertPageModule)
-  },
-  {
     path: 'perfil',
     loadChildren: () => import('./usuarios/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
@@ -72,10 +64,6 @@ const routes: Routes = [
     loadChildren: () => import('./ElementSettings/settings-cuenta/settings-cuenta.module').then( m => m.SettingsCuentaPageModule)
   },
   {
-    path: 'visualizaciones',
-    loadChildren: () => import('./ElementSettings/visualizaciones/visualizaciones.module').then( m => m.VisualizacionesPageModule)
-  },
-  {
     path: 'settings-privacidad',
     loadChildren: () => import('./ElementSettings/settings-privacidad/settings-privacidad.module').then( m => m.SettingsPrivacidadPageModule)
   },
@@ -90,6 +78,14 @@ const routes: Routes = [
   {
     path: 'centro-ayuda',
     loadChildren: () => import('./Terms/centro-ayuda/centro-ayuda.module').then( m => m.CentroAyudaPageModule)
+  },
+  {
+    path: 'olvidar-contrasena',
+    loadChildren: () => import('./usuarios/olvidar-contrasena/olvidar-contrasena.module').then( m => m.OlvidarContrasenaPageModule)
+  },
+  {
+    path: 'recetinset',
+    loadChildren: () => import('./recetas/recetinset/recetinset.module').then( m => m.RecetinsetPageModule)
   },
 ];
 

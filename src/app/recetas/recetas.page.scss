@@ -1,0 +1,14 @@
+.recetas {
+
+    &__texto {
+        p {
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: bold;            
+        }
+    }
+
+    ion-button[type="submit"] {
+        margin-top: 15px;
+    }
+}

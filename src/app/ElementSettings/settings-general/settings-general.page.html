@@ -16,7 +16,35 @@
       <div class="settings__texto">
         <ion-title>Configuracion General</ion-title>
       </div>
+      <div class="settings__opciones">
+        <ion-list-header>Cambiar Modo</ion-list-header>
+          <ion-list [inset]="true">
+            <ion-item>
+              <ion-toggle [(ngModel)]="themeToggle" (ionChange)="toggleChange($event)" justify="space-between">
+                {{ themeToggle ? 'Modo Oscuro' : 'Modo Claro' }}
+              </ion-toggle>
+            </ion-item>
+          </ion-list>
+
+          <ion-list-header>Informacion .....</ion-list-header>
+          <ion-list [inset]="true">
+            <ion-item>
+                <ion-select label="Default label" placeholder="Favorite Fruit">
+                  <ion-select-option value="apple">Apple</ion-select-option>
+                  <ion-select-option value="banana">Banana</ion-select-option>
+                  <ion-select-option value="orange">Orange</ion-select-option>
+                </ion-select>
+            </ion-item>
+          </ion-list>
       
+        <ion-list [inset]="true">
+          <ion-item [button]="true">Otros Opciones</ion-item>
+          <ion-item>
+            <!-- <ion-toggle justify="space-between">Bold Text</ion-toggle> -->
+          </ion-item>
+        </ion-list>  
+         
+      </div>
     </div><!--General-->
 
   </div><!--Settings-->
