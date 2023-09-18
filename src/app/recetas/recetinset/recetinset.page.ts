@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-recetinset',
   templateUrl: './recetinset.page.html',
@@ -15,7 +16,9 @@ export class RecetinsetPage implements OnInit {
   imagenes: File[] = []; 
   videoSeleccionado: File | undefined;
 
-  constructor() {}
+  constructor(
+    
+  ) {}
 
   handleImageUpload(event: any) {
     // Obtén todas las imágenes seleccionadas en el evento

@@ -9,42 +9,78 @@
     </div>
 
     <div class="registro__formulario">
-      <form >
+      <form (ngSubmit)="registrarUsuario()">
         <ion-item>
           <ion-label position="stacked">Nombre</ion-label>
-          <ion-input type="text" name="nombre" placeholder="Ingresa tu Nombre" ></ion-input>
+          <ion-input
+           type="text" 
+           name="nombre" 
+           placeholder="Ingresa tu Nombre" 
+           [(ngModel)]="nombre"
+           required
+           ></ion-input>
+           <ion-note color="danger" *ngIf="nombre === ''">El nombre es obligatorio</ion-note>
         </ion-item>
-
+        
         <ion-item>
           <ion-label position="stacked">Apellido</ion-label>
-          <ion-input type="text" name="apellido" placeholder="Ingresa tu Apellido" ></ion-input>
+          <ion-input
+           type="text" 
+           name="apellido" 
+           placeholder="Ingresa tu Apellido" 
+           [(ngModel)]="apellido"
+           required
+           ></ion-input>
+           <ion-note color="danger" *ngIf="apellido === ''">El Apellido es obligatorio</ion-note>
         </ion-item>
-
+        
         <ion-item>
           <ion-label position="stacked">Sexo</ion-label>
-          <ion-select name="sexo" placeholder="Seleccionar sexo" [(ngModel)]="sexo">
+          <ion-select name="sexo" placeholder="Seleccionar sexo" [(ngModel)]="sexo" required>
             <ion-select-option value="masculino">Masculino</ion-select-option>
             <ion-select-option value="femenino">Femenino</ion-select-option>
             <ion-select-option value="otro">Otro</ion-select-option>
           </ion-select>
+          <ion-note color="danger" *ngIf="sexo === ''">El sexo es obligatorio</ion-note>
         </ion-item>
-
+        
         <ion-item>
           <ion-label position="stacked">Correo electrónico</ion-label>
-          <ion-input type="email" name="email" placeholder="Ingresa tu Correo"></ion-input>
+          <ion-input
+           type="email" 
+           name="email" 
+           placeholder="Ingresa tu Correo" 
+           [(ngModel)]="email"
+           required
+           ></ion-input>
+           <ion-note color="danger" *ngIf="email === ''">El E-Mail es obligatorio</ion-note>
         </ion-item>
-
+        
         <ion-item>
           <ion-label position="stacked">Contraseña</ion-label>
-          <ion-input type="password" name="password" placeholder="Ingresa tu Contraseña" ></ion-input>
+          <ion-input
+           type="password" 
+           name="password" 
+           placeholder="Ingresa tu Contraseña" 
+           [(ngModel)]="password"
+           required
+           ></ion-input>
+           <ion-note color="danger" *ngIf="password === ''">La contraseña es obligatoria</ion-note>
         </ion-item>
-
+        
         <ion-item>
           <ion-label position="stacked">Repite Contraseña</ion-label>
-          <ion-input type="password" name="repeatPassword" placeholder="Repite tu Contraseña" ></ion-input>
+          <ion-input
+           type="password"
+           name="repeatPassword" 
+           placeholder="Repite tu Contraseña" 
+           [(ngModel)]="repeatPassword"
+           required
+           ></ion-input>
+            <ion-note color="danger" *ngIf="repeatPassword === ''">Debe repetir la contraseña</ion-note>
         </ion-item>
 
-        <ion-button type="submit" expand="full">Enviar</ion-button>
+        <ion-button type="submit" expand="full" [disabled]="!formularioValido()">Enviar</ion-button>
       </form>
     </div>
   </div>
@@ -52,3 +88,4 @@
 </ion-content>
 
 <app-footer></app-footer>
+
