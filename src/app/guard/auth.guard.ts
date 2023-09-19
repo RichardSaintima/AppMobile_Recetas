@@ -20,10 +20,11 @@ export class AuthGuard implements CanActivate {
     if (this.authService.isLoggedIn()) {
       return true; 
     } else {
-      this.mostrarError('Debe iniciar sesión antes de acceder.');
       this.router.navigate(['/login']); 
+      this.mostrarError('Debe iniciar sesión antes de acceder.');
       return false; 
-    }
+    } 
+  
   }
 
   private async mostrarError(mensaje: string) {
