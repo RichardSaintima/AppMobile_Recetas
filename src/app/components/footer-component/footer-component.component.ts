@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-footer',
@@ -8,7 +9,36 @@ import { Router } from '@angular/router';
 })
 export class FooterComponentComponent  implements OnInit {
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private alertController: AlertController) {}
+
+  async abrirOpciones() {
+    const alert = await this.alertController.create({
+      header: 'Elija Opcion',
+      buttons: [
+        {
+          text: 'Agregar Contenido',
+          handler: () => {
+            this.router.navigate(['/recetinset']);
+          }
+        },
+        {
+          text: 'Mis Contenidos',
+          handler: () => {
+            this.router.navigate(['/recetlist']);
+          }
+        },
+        {
+          text: 'Cancelar',
+          handler: () => {
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
+
 
   ngOnInit() {}
   navigateTo(page: string) {
@@ -37,5 +67,33 @@ export class FooterComponentComponent  implements OnInit {
       default:
         break;
     }
+  }
+
+  isActionSheetOpen = false;
+  public actionSheetButtons = [
+    {
+      text: 'Delete',
+      role: 'destructive',
+      data: {
+        action: 'delete',
+      },
+    },
+    {
+      text: 'Share',
+      data: {
+        action: 'share',
+      },
+    },
+    {
+      text: 'Cancel',
+      role: 'cancel',
+      data: {
+        action: 'cancel',
+      },
+    },
+  ];
+
+  setOpen(isOpen: boolean) {
+    this.isActionSheetOpen = isOpen;
   }
 }

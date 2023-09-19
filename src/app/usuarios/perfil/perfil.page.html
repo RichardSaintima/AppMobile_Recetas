@@ -1,42 +1,37 @@
-
+<!-- 
 <app-header>
   Mi Perfil
 </app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-grid>
+    <ion-grid>
       <div class="perfil">
-          <img class="perfil__image"
-              src="/assets/img/perfil.jpg"
-              alt="Foto de perfil">
-          <h2 class="perfil__nombre">Nombre del Usuario</h2>
-          <p class="perfil__correo">Correo electrónico: <span>usuario@example.com</span> </p>
-          <p class="perfil__direccion">Ubicación: Ciudad, País</p>
-          <!-- Otros detalles del perfil -->
+        <img class="perfil__image" src="/assets/img/perfil.jpg" alt="Foto de perfil">
+        <h2 class="perfil__nombre">{{ usuario.nombre }} {{ usuario.apellido }}</h2>
+        <p class="perfil__correo">Correo electrónico: <span>{{ usuario.correo }}</span></p>
 
-          <!-- Sección de actividades recientes o estadísticas -->
-          <div class="perfil__actividad">
-              <h3>MI LISTA</h3>
-              <ion-list>
-                  <ion-item>
-                      <ion-label>Segidores</ion-label>
-                      <ion-note>Completada</ion-note>
-                  </ion-item>
-
-                  <ion-item>
-                      <ion-label>Seguidos</ion-label>
-                      <ion-note>Pendiente</ion-note>
-                  </ion-item>
-
-                  <ion-item>
-                      <ion-label>Me Gustas</ion-label>
-                      <ion-note>Pendiente</ion-note>
-                  </ion-item>
-
-              </ion-list>
-          </div>
+        <div class="perfil__actividad">
+          <h3>MI LISTA</h3>
+          <ion-list>
+            <ion-item>
+              <ion-label>Seguidores</ion-label>
+              <ion-note>Completada</ion-note>
+            </ion-item>
+  
+            <ion-item>
+              <ion-label>Seguidos</ion-label>
+              <ion-note>Pendiente</ion-note>
+            </ion-item>
+  
+            <ion-item>
+              <ion-label>Me Gustas</ion-label>
+              <ion-note>Pendiente</ion-note>
+            </ion-item>
+          </ion-list>
+        </div>
       </div>
-  </ion-grid>
-</ion-content>
+    </ion-grid>
+  </ion-content>
+  
 
-<app-footer></app-footer>
+<app-footer></app-footer> -->

@@ -107,6 +107,25 @@ export class BasesdatosService {
     }
   }
   
+  async verificarInicioSesion(email: string, password: string): Promise<boolean> {
+    try {
+      const db = await this.crearBD();
+      if (db) {
+        const query = 'SELECT * FROM usuarios WHERE email = ? AND password = ?';
+        const data = [email, password];
+        const result = await db.executeSql(query, data);
+
+        if (result.rows.length > 0) {
+          // Se encontró un usuario con las credenciales proporcionadas
+          return true;
+        }
+      }
+      return false; // No se encontró un usuario con las credenciales proporcionadas
+    } catch (error) {
+      console.error('Error al verificar el inicio de sesión:', error);
+      return false; // Hubo un error al ejecutar la consulta SQL
+    }
+  }
 
   private async presentToast(message: string) {
     const toast = await this.toastController.create({
